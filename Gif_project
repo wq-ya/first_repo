@@ -1,0 +1,9 @@
+import imageio.v3 as iio
+
+filenames = ['GIF_pict1.png', 'GIF_pict2.png','GIF_pict3.png']
+images = [ ]
+
+for filename in filenames:
+  images.append(iio.imread(filename))
+
+iio.imwrite('yay.gif', images, duration = 500, loop = 0)
